@@ -1,0 +1,107 @@
+/* ...existing code... */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0eafc, #cfdef3);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  animation: bgFade 2s ease;
+}
+
+@keyframes bgFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  background: #005baa;
+  color: #fff;
+  padding: 30px 0 10px 0;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.slide-down {
+  animation: slideDown 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes slideDown {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.nav-animate a {
+  display: inline-block;
+  margin: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+  opacity: 0;
+  animation: navFade 0.8s forwards;
+}
+.nav-animate a:nth-child(1) { animation-delay: 0.2s; }
+.nav-animate a:nth-child(2) { animation-delay: 0.4s; }
+.nav-animate a:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes navFade {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.nav-animate a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 8px #fff;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    padding: 30px;
+    animation: zoomIn 1s cubic-bezier(.68, -0.55, .27, 1.55);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
+    color: #003366;
+    cursor: pointer;
+}
+.card:hover {
+    background: #4581bd;
+    color: #fff;
+    transform: scale(1.05);
+}
+.zoom-in {
+  animation: zoomIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #005baa;
+  color: #fff;
+  margin-top: 40px;
+  border-radius: 0 0 16px 16px;
+  animation: fadeIn 2s ease;
+}
+/* ...existing code... */

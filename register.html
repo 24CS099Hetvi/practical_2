@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - CHARUSAT Portal</title>
+  <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+  <header class="slide-down">
+    <h1 class="fade-in">Student Registration</h1>
+    <nav class="nav-animate">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+  <div class="modal-bg">
+    <div class="register-dialog pop-in">
+      <h2>Register for CHARUSAT Portal</h2>
+      <p>Fill in your details to create your student account and access all portal features.</p>
+      <form class="form-card" id="registerform">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Student ID" required>
+        <input type="text" placeholder="Course/Branch" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit" class="fade-in">Register</button>
+      </form>
+      <section class="dialog-section">
+        <h3>Why Register?</h3>
+        <ul>
+          <li>Access your personalized dashboard</li>
+          <li>Receive important notifications</li>
+          <li>Download study materials</li>
+          <li>Register for courses and exams</li>
+        </ul>
+      </section>
+      <section class="dialog-section">
+        <h3>Need Help?</h3>
+        <p>If you face any issues during registration, please <a href="https://www.charusat.ac.in/contact-us">contact support</a> or visit the campus help desk.</p>
+      </section>
+    </div>
+  </div>
+  <footer class="fade-in">
+    <p>&copy; 2025 CHARUSAT University. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("registerform").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Registration Successful!");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
